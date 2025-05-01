@@ -46,7 +46,7 @@ NYCU-Computer-Vision-2025-Spring-HW3
     ```
     Example
     ```
-    python main.py ./hw3-data-release --epochs 15 --batch_size 8 --learning_rate 1e-4 --decay 1e-4 --save_path saved_models
+    python main.py ./hw3-data-release --epochs 30 --batch_size 2 --learning_rate 1e-4 --decay 1e-4 --save_path saved_models
     ```
     2. Test Model
     ```
