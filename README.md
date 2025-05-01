@@ -3,8 +3,9 @@
 - Name: 江仲恩
 
 ## Introduction
-
-
+In this assignment, we develop a robust cell instance segmentation model that accurately classifies and segments cells in microscopy images from the HW3 dataset. To achieve strong generalization performance, we adopt the Mask R-CNN framework with a Swin-Tiny backbone, a Region Proposal Network (RPN), and dedicated classification and segmentation heads.
+Given the limited dataset size, we apply **Repeated Augmentation** techniques to effectively increase the diversity of training samples.
+Our best configuration achieves a mean Average Precision (mAP) of **0.3949**, demonstrating the effectiveness of our model architecture and optimization strategies.
 
 
 ## How to install
