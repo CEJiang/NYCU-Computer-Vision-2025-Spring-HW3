@@ -5,8 +5,8 @@
 ## Introduction
 In this assignment, we developed a robust cell instance segmentation model capable of accurately classifying and segmenting cells in microscopy images from the HW3 dataset. To enhance the model’s generalization ability, we adopted the Mask R-CNN architecture with Swin-Tiny as the backbone, a Region Proposal Network (RPN), a Path Aggregation Network (PAN), and dedicated classification and segmentation heads.
 Given the limited size of the dataset, we applied **Repeated Augmentation** during training to effectively increase the diversity of training samples.
-To further boost inference performance, we introduced multiple Test-Time Augmentation (TTA) strategies, including horizontal and vertical flips, 90°/180° rotations, brightness and contrast adjustments, hue shifts, Gaussian blur, and transposition. Each augmented image was transformed back to the original space and aggregated, followed by Non-Maximum Suppression (NMS) to remove redundant predictions and retain the most confident ones.
-Our best configuration achieved a mAP of 0.**4488**, demonstrating the overall effectiveness of our model architecture, training strategy, and inference-time enhancements.
+To further boost inference performance, we introduced multiple **Test-Time Augmentation (TTA)** strategies, including horizontal and vertical flips, 90°/180° rotations, brightness and contrast adjustments, hue shifts, Gaussian blur, and transposition. Each augmented image was transformed back to the original space and aggregated, followed by Non-Maximum Suppression (NMS) to remove redundant predictions and retain the most confident ones.
+Our best configuration achieved a mAP of 0.**4308**, demonstrating the overall effectiveness of our model architecture, training strategy, and inference-time enhancements.
 
 ## How to install
 
@@ -66,24 +66,22 @@ NYCU-Computer-Vision-2025-Spring-HW3
 | Pretrained Weight| Swin_V2_T_Weights                                                                                       |
 | Learning Rate    | 0.0001                                                                                                  |
 | Batch Size       | 2                                                                                                       |
-| Epochs           | 30                                                                                                      |
+| Epochs           | 50                                                                                                      |
 | decay            | 0.005                                                                                                   |
 | Optimizer        | AdamW                                                                                                   |
 | Eta_min          | 0.000001                                                                                                |
-| T_max            | 30                                                                                                      |
+| T_max            | 50                                                                                                      |
 | Scheduler        | `CosineAnnealingLR`                                                                                     |
 | Criterion        | `CrossEntropyLoss(Classification)` + `Smooth L1 Loss(Localization)` + `Binary Cross Entropy Loss (Mask)`|
 
-<!-- ### Training Curve
-![Image](https://github.com/CEJiang/NYCU-Computer-Vision-2025-Spring-HW2/blob/main/Image/training_curve.png)
-### validate mAP Curve
-![Image](https://github.com/CEJiang/NYCU-Computer-Vision-2025-Spring-HW2/blob/main/Image/val_map_curve.png)
-### validate AP / AR Curve
-![Image](https://github.com/CEJiang/NYCU-Computer-Vision-2025-Spring-HW2/blob/main/Image/ResNet50_Original.png) -->
+### Training Curve
+![Image](https://github.com/CEJiang/NYCU-Computer-Vision-2025-Spring-HW3/blob/main/Image/training_curve.png)
+### validate AP / AR / mAP Curve
+![Image](https://github.com/CEJiang/NYCU-Computer-Vision-2025-Spring-HW3/blob/main/Image/APARMAP.png)
 
 ### Performance
 |                  | mAP                      |
 |------------------|--------------------------|
-| Validation       | 0.3426                   |
-| Public Test      | 0.4488                   |
+| Validation       | 0.3600                   |
+| Public Test      | 0.4308                   |
 
