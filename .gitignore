@@ -1,0 +1,12 @@
+# pytorch model 
+__pycache__/
+
+# dataset
+data/
+
+# temp model
+model_resnet.py
+new_model.py
+
+# data
+extra_data/
