@@ -43,11 +43,11 @@ NYCU-Computer-Vision-2025-Spring-HW3
 4. Run for Train
     1. Train Model 
     ```
-    python main.py DATAPATH [--epochs EPOCH] [--batch_size BATCH_SIZE] [--learning_rate LEARNING_RATE] [--decay DECAY] [--eta_min ETA_MIN] [--save_path SAVE_FOLDER] [--mode train]
+    python main.py DATAPATH [--epochs EPOCH] [--batch_size BATCH_SIZE] [--learning_rate LEARNING_RATE] [--decay DECAY] [--eta_min ETA_MIN] [--saved_path SAVE_FOLDER] [--mode train]
     ```
     Example
     ```
-    python main.py ./hw3-data-release --epochs 50 --batch_size 2 --learning_rate 1e-4 --decay 1e-4 --save_path saved_models
+    python main.py ./hw3-data-release --epochs 50 --batch_size 2 --learning_rate 1e-4 --decay 5e-3 --saved_path saved_models
     ```
     2. Test Model
     ```

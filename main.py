@@ -56,7 +56,7 @@ def main():
         "-s",
         "--saved_path",
         type=str,
-        default="saved_models_swin_t_pan_CBAM_v1",
+        default="saved_models",
         help="Save directory.")
     parser.add_argument(
         "-m",
